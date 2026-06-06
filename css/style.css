@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+/* ===== 네비게이션 ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background: #111827;
+    border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-btn {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-btn.active-nav {
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    color: #3b82f6;
+}
+
+/* ===== 페이지 영역 ===== */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ===== HOME ===== */
+.info {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.info h1 {
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.info p {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.info-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.info-btn {
+    padding: 12px 14px;
+    background: #2563eb;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.info-btn:hover {
+    transform: translateY(-3px);
+}
+
+.profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25ox rgba(59,130,246,0.4);
+}
+
+/* ===== 공통 제목 ===== */
+.page h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-container {
+    display: grid;
+    gap: 25px;
+}
+
+.experience-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: 0.3;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.period {
+    color: #94a3b8;
+    margin: 10px 0;
+}
+
+.experience-card ul {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    margin-top: 20px;
+    color: #60a5fa;
+    font-size: 0.9rem;
+}
+
+/* ===== PROJECTS ===== */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p:first-of-type {
+    color: #60a5fa;
+    margin-bottom: 15px;
+}
+
+/* ===== SKILLS ===== */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 12px 20px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 999px;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #2563eb;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-container {
+    background: #1e293b;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #334155;
+}
+
+.contact-container p {
+    margin-bottom: 10px;
+}
+
+/* ===== 모바일 ===== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
